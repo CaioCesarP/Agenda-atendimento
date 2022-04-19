@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4c94ac07.css",
+    "main.js": "/static/js/main.b2cacf67.js",
+    "static/media/ecommerce-como-surgiram-vendas-online-blog-v01.png": "/static/media/ecommerce-como-surgiram-vendas-online-blog-v01.481ae1b1004c0baa5599.png",
+    "index.html": "/index.html",
+    "main.4c94ac07.css.map": "/static/css/main.4c94ac07.css.map",
+    "main.b2cacf67.js.map": "/static/js/main.b2cacf67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c94ac07.css",
+    "static/js/main.b2cacf67.js"
+  ]
+}
