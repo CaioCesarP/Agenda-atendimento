@@ -6,6 +6,10 @@ Esse projeto de trata e um trabalho teste de qualificação para uma vaga. Desej
 
 Pode ser rodado caso feito a copia do arquivo os seguintes comandos:
 
+### `yarn install`
+
+Instalando todos os pacotes necessários.
+
 ### `yarn start`
 
 O servidor é iniciado.

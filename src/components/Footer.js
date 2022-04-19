@@ -22,7 +22,7 @@ const Footer = () => {
             </IconButton>
           </a>
           <a
-            href="https://github.com/CaioCesarP"
+            href="https://github.com/CaioCesarP/E-commerce"
             target="_blank"
             rel="noreferrer"
           >

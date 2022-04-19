@@ -240,18 +240,55 @@ th {
 }
 
 .info {
-    width: 50%;
-    height: 90%;
+  width: 50%;
+  height: 90%;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    align-items: center;
-    justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .icon::before {
-    content: "©";
+  content: "©";
 }
 
+@media (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+  }
 
+  .content {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 80vw;
+  }
+
+  .adjust {
+    margin-top: 10vh;
+  }
+
+  .input {
+   margin: 1rem 0 !important;
+  }
+
+  .box-input {
+    flex-direction: column;
+  }
+
+  .box-button, .adjust-1 {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .box-2 {
+    display: none;
+  }
+
+  .right {
+    width: 98%;
+  }
+}

@@ -15,8 +15,12 @@ const Content = () => {
             </div>
             <div className="box-button">
               <div className="adjust-1">
-                <Button variant="outlined">adicionar</Button>
-                <Button variant="outlined">editar</Button>
+                <Button variant="outlined">
+                  adicionar
+                </Button>
+                <Button variant="outlined">
+                  editar
+                </Button>
               </div>
             </div>
           </div>
