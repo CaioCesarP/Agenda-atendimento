@@ -141,13 +141,18 @@ body {
   width: 40%;
 }
 
+.subtitle {
+  margin-left: 32%;
+}
+
 .box-2 {
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  background-image: url(./img/ecommerce-como-surgiram-vendas-online-blog-v01.png);
+  background-image: url(./img/agenda.jpg);
+  background-repeat: no-repeat;
 }
 
 .box-glass {
@@ -207,21 +212,21 @@ body {
   width: 100%;
 }
 
-td,
-th {
+.table td,
+.table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-tr:nth-child(even) {
+.table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-td:hover {
+.table td:hover {
   background-color: #ddd;
 }
 
-th {
+.table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
