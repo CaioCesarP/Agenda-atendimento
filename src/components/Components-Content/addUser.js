@@ -14,6 +14,7 @@ const AddUser = (props) => {
     <div>
       <div className="box-input">
         <TextField
+          required
           name="nome"
           type="text"
           className="input input--nome"
@@ -22,6 +23,7 @@ const AddUser = (props) => {
           onChange={HandleChange}
         />
         <TextField
+          required
           name="data"
           type="text"
           className="input input--data"
@@ -36,7 +38,7 @@ const AddUser = (props) => {
             variant="outlined"
             onClick={(event) => {
               event.preventDefault();
-            //   if (!user.nome || !user.data) return;
+              if (user.nome === "" || !user.data === "") return;
 
               props.addUser(user);
               setUser(props.initialFormState);

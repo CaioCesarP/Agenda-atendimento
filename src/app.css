@@ -186,15 +186,18 @@ body {
   width: 50%;
   height: 100%;
 
+  padding-top: 20px;
+
   display: flex;
 
-  align-items: center;
   justify-content: center;
 }
 
 .field {
   width: 95%;
   height: 98%;
+
+  overflow-y: scroll;
 
   display: flex;
 
@@ -295,5 +298,9 @@ body {
 
   .right {
     width: 98%;
+  }
+
+  .field {
+    height: 60%;
   }
 }
