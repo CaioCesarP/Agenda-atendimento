@@ -2,26 +2,27 @@ import Table from "./Components-Content/Table";
 import AddUser from "./Components-Content/addUser";
 import EditUser from "./Components-Content/editUser";
 
-import React from "react";
+import React, { useState } from "react";
 
 const Content = () => {
   const usersData = [
-    { id: 1, nome: "Juca", data: "24/04 | 13:30" },
-    { id: 2, nome: "Maria", data: "24/04 | 15:30" },
-    { id: 3, nome: "Leonardo", data: "25/04 | 15:30" },
+    // { id: 1, nome: "Juca", data: "24/04 | 13:30" },
+    // { id: 2, nome: "Maria", data: "24/04 | 15:30" },
+    // { id: 3, nome: "Leonardo", data: "25/04 | 15:30" },
   ];
 
   const initialState = { id: null, nome: "", data: "" };
 
-  const [users, setUsers] = React.useState(usersData);
+  const [users, setUsers] = useState(usersData);
 
-  const [editing, setEditing] = React.useState(false);
+  const [editing, setEditing] = useState(false);
 
-  const [currentUser, setCurrentUser] = React.useState(initialState);
+  const [currentUser, setCurrentUser] = useState(initialState);
 
   const addUser = (user) => {
     user.id = users.length + 1;
 
+    console.log(user.id)
     setUsers([...users, user]);
   };
 

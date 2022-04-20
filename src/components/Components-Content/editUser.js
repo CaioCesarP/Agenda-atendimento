@@ -15,7 +15,13 @@ const EditUser = (props) => {
   };
 
   return (
-    <div>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+
+        props.updateUser(user.id, user);
+      }}
+    >
       <div className="box-input">
         <TextField
           name="nome"
@@ -34,22 +40,13 @@ const EditUser = (props) => {
       </div>
       <div className="box-button">
         <div className="adjust-1">
-          <Button
-            variant="outlined"
-            onClick={(event) => {
-              event.preventDefault();
-
-              props.updateUser(user.id, user);
-            }}
-          >
-            editar
-          </Button>
+          <Button type="submit" variant="outlined">editar</Button>
           <Button variant="outlined" onClick={() => props.setEditing(false)}>
             cancelar
           </Button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 
