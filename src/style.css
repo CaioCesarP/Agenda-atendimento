@@ -151,7 +151,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: url(./img/agenda.jpg);
+  background-image: url(./inicial/img/agenda.jpg);
   background-repeat: no-repeat;
 }
 
@@ -271,36 +271,36 @@ body {
     flex-direction: column;
   }
 
-  .left {
+  .content .left {
     width: 80vw;
   }
 
-  .adjust {
+  .content .adjust {
     margin-top: 10vh;
   }
 
-  .input {
+  .content .input {
    margin: 1rem 0 !important;
   }
 
-  .box-input {
+  .content .box-input {
     flex-direction: column;
   }
 
-  .box-button, .adjust-1 {
+  .content .box-button, .adjust-1 {
     flex-direction: column;
     justify-content: center;
   }
 
-  .box-2 {
+  .content .box-2 {
     display: none;
   }
 
-  .right {
+  .content .right {
     width: 98%;
   }
 
-  .field {
+  .content .field {
     height: 60%;
   }
 }

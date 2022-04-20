@@ -1,14 +1,10 @@
-import "./app.css";
-
-import Navbar from "./components/Navbar";
-import Content from "./components/Content";
-import Footer from "./components/Footer";
+import Pages from "./routes";
+import Footer from "./inicial/components/Footer";
 
 function App() {
   return (
     <div className="container">
-      <Navbar />
-      <Content />
+      <Pages />
       <Footer />
     </div>
   );

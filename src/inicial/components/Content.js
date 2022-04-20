@@ -1,3 +1,5 @@
+import '../../style.css';
+
 import Table from "./Components-Content/Table";
 import AddUser from "./Components-Content/addUser";
 import EditUser from "./Components-Content/editUser";

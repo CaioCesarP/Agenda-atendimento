@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,12 +8,12 @@ const Navbar = () => {
         <Typography variant="h2">Atendimento</Typography>
       </div>
       <div className="nav">
-        <a href="#Agenda" className="nav--link">
+        <Link to="/" className="nav--link">
           Agenda
-        </a>
-        <a href="#Sobre" className="nav--link">
+        </Link>
+        <Link to="/sobre" className="nav--link">
           Sobre
-        </a>
+        </Link>
       </div>
     </div>
   );

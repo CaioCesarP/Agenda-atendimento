@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e61736d.css",
-    "main.js": "/static/js/main.c0b1bfa0.js",
-    "static/media/ecommerce-como-surgiram-vendas-online-blog-v01.png": "/static/media/ecommerce-como-surgiram-vendas-online-blog-v01.481ae1b1004c0baa5599.png",
+    "main.css": "/static/css/main.0eb97174.css",
+    "main.js": "/static/js/main.f8d64c53.js",
+    "static/media/agenda.jpg": "/static/media/agenda.73234b6ac9f794481a0f.jpg",
+    "static/media/rocket.jpg": "/static/media/rocket.28dac1884a2ebc4dbd8e.jpg",
     "index.html": "/index.html",
-    "main.6e61736d.css.map": "/static/css/main.6e61736d.css.map",
-    "main.c0b1bfa0.js.map": "/static/js/main.c0b1bfa0.js.map"
+    "main.0eb97174.css.map": "/static/css/main.0eb97174.css.map",
+    "main.f8d64c53.js.map": "/static/js/main.f8d64c53.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e61736d.css",
-    "static/js/main.c0b1bfa0.js"
+    "static/css/main.0eb97174.css",
+    "static/js/main.f8d64c53.js"
   ]
 }
