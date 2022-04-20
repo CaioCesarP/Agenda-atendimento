@@ -28,4 +28,4 @@ Todos os utilizáveis são expostos no packge.json. Ação única, não é poss�
 
 #### Página online da aplicação
 
-e-commerce.estoque.vercel.app
+Agenda-atendimento.vercel.app
