@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 
-const AddUser = (props) => {
-  const [user, setUser] = useState(props.initialState);
+const AddUserForm = (props) => {
+  const [user, setUser] = useState(props.initialFormState);
 
-  const HandleChangeInput = (event) => {
-    const { nome, value } = event.target;
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
 
-    setUser({ ...user, [nome]: value });
+    setUser({ ...user, [name]: value });
   };
-
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        // if (user.nome !== null && user.data !== null) return
-
+        if (user.nome === "" && (user.data === "" || user.data.length <= 3) ) return
+        
         props.addUser(user);
-        setUser(props.initialState);
+        setUser(props.initialFormState);
       }}
     >
       <div className="box-input">
@@ -27,7 +26,7 @@ const AddUser = (props) => {
           className="input input--nome"
           label="Nome"
           value={user.nome}
-          onChange={HandleChangeInput}
+          onChange={handleInputChange}
         />
         <TextField
           name="data"
@@ -35,16 +34,18 @@ const AddUser = (props) => {
           className="input input--data"
           label="Data"
           value={user.data}
-          onChange={HandleChangeInput}
+          onChange={handleInputChange}
         />
       </div>
       <div className="box-button">
         <div className="adjust-1">
-          <Button type="submit" variant="outlined">adicionar</Button>
+          <Button type="submit" variant="outlined">
+            adicionar
+          </Button>
         </div>
       </div>
     </form>
   );
 };
 
-export default AddUser;
+export default AddUserForm;

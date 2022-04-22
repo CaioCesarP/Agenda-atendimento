@@ -1,30 +1,29 @@
-import '../../style.css';
+import "../../style.css";
 
 import Table from "./Components-Content/Table";
-import AddUser from "./Components-Content/addUser";
+import AddUserForm from "./Components-Content/addUser";
 import EditUser from "./Components-Content/editUser";
 
 import React, { useState } from "react";
 
 const Content = () => {
   const usersData = [
-    // { id: 1, nome: "Juca", data: "24/04 | 13:30" },
-    // { id: 2, nome: "Maria", data: "24/04 | 15:30" },
-    // { id: 3, nome: "Leonardo", data: "25/04 | 15:30" },
+    { id: 1, nome: "Juca", data: "10:30 | 04/22" },
+    { id: 2, nome: "John", data: "13:30 | 04/22" },
+    { id: 3, nome: "Mary", data: "13:30 | 04/25" },
   ];
 
-  const initialState = { id: null, nome: "", data: "" };
+  const initialFormState = { id: null, nome: "", data: "" };
 
   const [users, setUsers] = useState(usersData);
 
   const [editing, setEditing] = useState(false);
 
-  const [currentUser, setCurrentUser] = useState(initialState);
+  const [currentUser, setCurrentUser] = useState(initialFormState);
 
   const addUser = (user) => {
     user.id = users.length + 1;
 
-    console.log(user.id)
     setUsers([...users, user]);
   };
 
@@ -38,10 +37,10 @@ const Content = () => {
     setCurrentUser({ id: user.id, nome: user.nome, data: user.data });
   };
 
-  const updateUser = (id, updateUser) => {
+  const updateUser = (id, updatedUser) => {
     setEditing(false);
 
-    setUsers(users.map((user) => (user.id === id ? updateUser : user)));
+    setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
   };
 
   return (
@@ -60,7 +59,7 @@ const Content = () => {
           ) : (
             <div className="adjust">
               <h2 className="subtitle">Adicionando</h2>
-              <AddUser initialState={initialState} addUser={addUser} />
+              <AddUserForm initialFormState={initialFormState} addUser={addUser} />
             </div>
           )}
         </div>

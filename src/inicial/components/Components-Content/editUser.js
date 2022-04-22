@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TextField, Button } from "@mui/material";
 
 const EditUser = (props) => {
-  const [user, setUser] = React.useState(props.currentUser);
+  const [user, setUser] = useState(props.currentUser);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setUser(props.currentUser);
   }, [props]);
 
-  const HandleChange = (event) => {
-    const { nome, value } = event.target;
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
 
-    setUser({ ...user, [nome]: value });
+    setUser({ ...user, [name]: value });
   };
 
   return (
@@ -28,19 +28,21 @@ const EditUser = (props) => {
           className="input input--nome"
           label="Nome"
           value={user.nome}
-          onChange={HandleChange}
+          onChange={handleInputChange}
         />
         <TextField
           name="data"
           className="input input--data"
           label="Data"
           value={user.data}
-          onChange={HandleChange}
+          onChange={handleInputChange}
         />
       </div>
       <div className="box-button">
         <div className="adjust-1">
-          <Button type="submit" variant="outlined">editar</Button>
+          <Button type="submit" variant="outlined">
+            editar
+          </Button>
           <Button variant="outlined" onClick={() => props.setEditing(false)}>
             cancelar
           </Button>

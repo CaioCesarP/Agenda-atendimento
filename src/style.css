@@ -62,6 +62,9 @@ body {
 .nav--link:hover {
   color: whitesmoke;
 
+  position: relative;
+  transform: scale(1.2);
+
   background-color: green;
 
   box-shadow: 0 0 1rem lightgreen;
@@ -305,6 +308,6 @@ body {
   }
 
   .content .field {
-    height: 60%;
+    height: 42%;
   }
 }
