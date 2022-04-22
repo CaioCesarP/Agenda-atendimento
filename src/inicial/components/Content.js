@@ -8,12 +8,12 @@ import React, { useState } from "react";
 
 const Content = () => {
   const usersData = [
-    { id: 1, nome: "Juca", data: "10:30 | 04/22" },
-    { id: 2, nome: "John", data: "13:30 | 04/22" },
-    { id: 3, nome: "Mary", data: "13:30 | 04/25" },
+    { id: 1, titulo: "Produto 102", descricao: "lorem ipsum", prazo: "18-04-2022", entregue: "sim" },
+    { id: 2, titulo: "Produto 006", descricao: "lorem ipsum", prazo: "25-04-2022", entregue: "não" },
+    { id: 3, titulo: "Produto 250", descricao: "lorem ipsum", prazo: "01-05-2022", entregue: "não" },
   ];
 
-  const initialFormState = { id: null, nome: "", data: "" };
+  const initialFormState = { id: null, titulo: "", descricao: "", prazo: "", entregue: "" };
 
   const [users, setUsers] = useState(usersData);
 
@@ -34,7 +34,7 @@ const Content = () => {
   const editRow = (user) => {
     setEditing(true);
 
-    setCurrentUser({ id: user.id, nome: user.nome, data: user.data });
+    setCurrentUser({ id: user.id, titulo: user.titulo, descricao: user.descricao, prazo: user.prazo, entregue: user.entregue });
   };
 
   const updateUser = (id, updatedUser) => {
@@ -64,22 +64,7 @@ const Content = () => {
           )}
         </div>
         <div className="box box-2">
-          <div className="box-glass">
-            <div className="box-grid">
-              <div className="item item-1">
-                <img alt="item-1" src="#" />
-              </div>
-              <div className="item item-2">
-                <img alt="item-2" src="#" />
-              </div>
-              <div className="item item-3">
-                <img alt="item-3" src="#" />
-              </div>
-              <div className="item item-4">
-                <img alt="item-4" src="#" />
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div className="right">

@@ -9,31 +9,61 @@ const AddUserForm = (props) => {
 
     setUser({ ...user, [name]: value });
   };
+
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (user.nome === "" && (user.data === "" || user.data.length <= 3) ) return
-        
+        if (
+          user.titulo === "" ||
+          user.descricao === "" ||
+          user.prazo === "" ||
+          user.entregue !== "sim" ||
+          user.entregue !== "não"
+        )
+          return;
+
         props.addUser(user);
         setUser(props.initialFormState);
       }}
     >
       <div className="box-input">
         <TextField
-          name="nome"
+          required
+          name="titulo"
           type="text"
-          className="input input--nome"
-          label="Nome"
-          value={user.nome}
+          className="input input--titulo"
+          label="Título"
+          value={user.titulo}
           onChange={handleInputChange}
         />
         <TextField
-          name="data"
+          required
+          name="descricao"
           type="text"
-          className="input input--data"
-          label="Data"
-          value={user.data}
+          className="input input--descricao"
+          label="Descrição"
+          value={user.descricao}
+          onChange={handleInputChange}
+        />
+        <TextField
+          required
+          name="prazo"
+          type="text"
+          className="input input--prazo"
+          label="Prazo de entrega"
+          placeholder="dd-mm-aaaa"
+          value={user.prazo}
+          onChange={handleInputChange}
+        />
+        <TextField
+          required
+          name="entregue"
+          type="text"
+          className="input input--entregue"
+          label="Entrega concluída"
+          placeholder="sim/não"
+          value={user.entregue}
           onChange={handleInputChange}
         />
       </div>

@@ -97,6 +97,7 @@ body {
 }
 
 .box {
+  padding: 1rem;
   width: 100%;
   height: 50%;
 }
@@ -107,6 +108,8 @@ body {
 
   align-items: center;
   justify-content: center;
+
+  margin-top: 5rem;
 }
 
 .adjust {
@@ -117,7 +120,7 @@ body {
   width: 100%;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   justify-content: space-between;
 
@@ -125,7 +128,11 @@ body {
 }
 
 .input {
-  margin: 0 1rem !important;
+  margin: 1rem 1rem !important;
+}
+
+.box-input .switch {
+  margin-left: 0.3rem;
 }
 
 .box-button {
@@ -155,38 +162,10 @@ body {
 .box-2 {
   display: flex;
 
+  padding: 10px;
+
   align-items: center;
   justify-content: center;
-
-  background-image: url(./inicial/img/agenda.jpg);
-  background-repeat: no-repeat;
-}
-
-.box-glass {
-  width: 85%;
-  height: 80%;
-
-  padding: 1rem;
-
-  border-radius: 10px;
-
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
-
-.box-grid {
-  display: grid;
-
-  gap: 7rem;
-
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.item {
-  align-self: center;
-  justify-self: center;
 }
 
 .right {
@@ -270,12 +249,18 @@ body {
 }
 
 @media (max-width: 1000px) {
+  .container {
+    height: 150vh;
+  }
+
   .navbar {
     flex-direction: column;
   }
 
   .content {
     flex-direction: column;
+
+    width: auto;
   }
 
   .content .left {
@@ -308,6 +293,7 @@ body {
   }
 
   .content .field {
-    height: 42%;
+    height: 50%;
+    width: auto;
   }
 }

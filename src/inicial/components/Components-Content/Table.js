@@ -6,8 +6,10 @@ const Table = (props) => {
   <table className="table">
     <thead>
       <tr>
-        <th>Nome</th>
-        <th>Data</th>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Prazo de entrega</th>
+        <th>Entrega concluída</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -15,8 +17,10 @@ const Table = (props) => {
       {length > 0 ? (
         props.users.map((user) => (
           <tr key={user.id}>
-            <td>{user.nome}</td>
-            <td>{user.data}</td>
+            <td>{user.titulo}</td>
+            <td>{user.descricao}</td>
+            <td>{user.prazo}</td>
+            <td>{user.entregue}</td>
             <td>
               <Button
                 onClick={() => {

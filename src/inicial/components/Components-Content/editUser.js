@@ -24,17 +24,41 @@ const EditUser = (props) => {
     >
       <div className="box-input">
         <TextField
-          name="nome"
-          className="input input--nome"
-          label="Nome"
-          value={user.nome}
+          required
+          name="titulo"
+          type="text"
+          className="input input--titulo"
+          label="Título"
+          value={user.titulo}
           onChange={handleInputChange}
         />
         <TextField
-          name="data"
-          className="input input--data"
-          label="Data"
-          value={user.data}
+          required
+          name="descricao"
+          type="text"
+          className="input input--descricao"
+          label="Descrição"
+          value={user.descricao}
+          onChange={handleInputChange}
+        />
+        <TextField
+          required
+          name="prazo"
+          type="text"
+          className="input input--prazo"
+          label="Prazo de entrega"
+          placeholder="dd-mm-aaaa"
+          value={user.prazo}
+          onChange={handleInputChange}
+        />
+        <TextField
+          required
+          name="entregue"
+          type="text"
+          className="input input--entregue"
+          label="Entrega concluída"
+          placeholder="sim/não"
+          value={user.entregue}
           onChange={handleInputChange}
         />
       </div>
