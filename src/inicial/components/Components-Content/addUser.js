@@ -14,14 +14,6 @@ const AddUserForm = (props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (
-          user.titulo === "" ||
-          user.descricao === "" ||
-          user.prazo === "" ||
-          user.entregue !== "sim" ||
-          user.entregue !== "não"
-        )
-          return;
 
         props.addUser(user);
         setUser(props.initialFormState);
