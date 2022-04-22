@@ -1,6 +1,6 @@
 # Funcionalidade
 
-Esse projeto de trata e um trabalho teste de qualificação para uma vaga. Deseja-se ser implementado a uma lista informações, uma tabela de estoque para e-commerce no meu caso. Foi utilizado do ReactJs e tudo o que ele pode proporcionar para o tratamento dessa atividade.
+Esse projeto de trata e um trabalho teste de qualificação para uma vaga. Deseja-se ser implementado a uma lista informações, uma tabela com informações básicas sobre o nome do recente e a data prevista das entregas. Foi utilizado do ReactJs e tudo o que ele pode proporcionar para o tratamento dessa atividade.
 
 ## Scripts 
 
