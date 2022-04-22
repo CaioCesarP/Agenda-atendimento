@@ -18,10 +18,49 @@ const Sobre = () => {
           <Typography variant="h5" className="convite" gutterBottom>
             Venha se tornar mais conectado conosco, entre em contato já!
           </Typography>
-          <Button color="secondary" variant="contained" size="large">CONTATO</Button>
+          <Button color="secondary" variant="contained" size="large">
+            CONTATO
+          </Button>
         </div>
       </div>
       <div className="right">
+        <Typography variant="h4" color="red" gutterBottom>
+          COMENTÁRIOS
+        </Typography>
+        <div className="double">
+          <div className="card">
+            <p className="comentario">
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores ratione, ea dolor quidem autem et, tempora, sit non
+              nesciunt quas eligendi molestiae laudantium neque doloremque
+              voluptates quae perspiciatis sequi tenetur!{" "}
+            </p>
+            <p className="autor">CEO da Lorem ipsum</p>
+          </div>
+          <div className="card">
+            <p className="comentario">
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores ratione, ea dolor quidem autem et, tempora, sit non
+              nesciunt quas eligendi molestiae laudantium neque doloremque
+              voluptates quae perspiciatis sequi tenetur!{" "}
+            </p>
+            <p className="autor">Empresário Lorem ipsum</p>
+          </div>
+        </div>
+        <div className="single">
+          <div className="card">
+            <p className="comentario">
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores ratione, ea dolor quidem autem et, tempora, sit non
+              nesciunt quas eligendi molestiae laudantium neque doloremque
+              voluptates quae perspiciatis sequi tenetur!{" "}
+            </p>
+            <p className="autor">Equipe da Lorem ipsum</p>
+          </div>
+        </div>
       </div>
     </div>
   );
