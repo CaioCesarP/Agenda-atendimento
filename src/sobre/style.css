@@ -74,31 +74,24 @@
   align-items: center;
 }
 
-.sobre .double {
-  width: 100%;
-  height: 45%;
-  
-  display: flex;
-  flex-direction: row;
+.sobre .carousel {
+  width: 80%;
+  height: auto;
 
-  justify-content: space-around;
-  align-items: center;
+  padding: 30px;
 }
 
-.sobre .single {
-  width: 100%;
-  height: 45%;
+.sobre .button-slide {
+  margin-top: 1rem;
+  margin-right: 1rem;
 
-  display: flex;
-  
-  justify-content: center;
-  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 20px;
 }
 
 .sobre .card {
-  width: 47%;
-  height: 90%;
-
   display: flex;
   flex-direction: column;
 
@@ -116,14 +109,11 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-
-  transition: all 0.4s;
 }
 
-.sobre .card:hover {
-  position: relative;
-
-  transform: scale(1.1);
+.sobre .img--client {
+  width: 350px;
+  height: 350px;
 }
 
 .sobre .comentario {
@@ -136,9 +126,9 @@
   color: crimson;
 }
 
-.sobre .autor::after, .sobre .autor::before {
+.sobre .autor::after,
+.sobre .autor::before {
   content: "'";
-  
 }
 
 @media (max-width: 1000px) {
@@ -153,18 +143,16 @@
   .sobre .left {
     width: 80%;
     height: 95%;
-  }
-
-  .sobre .double {
-    flex-direction: column;
-
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   .sobre .right {
     width: 80%;
     height: 95%;
+  }
 
+  .sobre .img--client {
+    display: none;
   }
 
   .sobre .card {
