@@ -272,14 +272,15 @@ body {
   }
 
   .content .input {
-   margin: 1rem 0 !important;
+    margin: 1rem 0 !important;
   }
 
   .content .box-input {
     flex-direction: column;
   }
 
-  .content .box-button, .adjust-1 {
+  .content .box-button,
+  .adjust-1 {
     flex-direction: column;
     justify-content: center;
   }
