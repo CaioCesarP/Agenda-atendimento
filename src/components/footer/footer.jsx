@@ -1,6 +1,9 @@
 import { Typography, IconButton } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles(() => ({}));
 
 const Footer = () => {
   return (

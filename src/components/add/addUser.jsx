@@ -1,13 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TextField, Button, Alert } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const EditUser = (props) => {
-  const [user, setUser] = useState(props.currentUser);
+const useStyles = makeStyles(() => ({
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  box: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    marginBottom: "1rem",
+    gap: "1rem",
+    margin: "1rem 0",
+  },
+}));
+
+const AddUserForm = (props) => {
+  const [user, setUser] = useState(props.initialFormState);
   const [erro, setErro] = useState(null);
-
-  useEffect(() => {
-    setUser(props.currentUser);
-  }, [props]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -17,7 +32,7 @@ const EditUser = (props) => {
 
   const validation = (event) => {
     const regPrazo =
-      /^\b(0?[1-9]|[12][0-9]|3[01])\b-\b(0?[1-9]|1[0-2])\b-\b(2022|[2-9][0-9][0-9][0-9])\b$/;
+      /^\b(0?[1-9]|[12][0-9]|3[01])\b-\b(0?[1-9]|1[0-2])\b-\b([2-9][0-9][0-9][0-9])\b$/;
     if (
       user.titulo === "" ||
       user.descricao === "" ||
@@ -36,12 +51,15 @@ const EditUser = (props) => {
 
     event.preventDefault();
 
-    props.updateUser(user.id, user);
+    props.addUser(user);
+    setUser(props.initialFormState);
     setErro(null);
   };
 
+  const styles = useStyles();
+
   return (
-    <>
+    <section className={styles.form}>
       {erro === "empty" ? (
         <Alert severity="error">
           Campo vazio - <strong>revise dados</strong>
@@ -56,14 +74,14 @@ const EditUser = (props) => {
         </Alert>
       ) : (
         <Alert severity="info">
-          Modifique os dados - <strong>dados a serem modificados</strong>
+          Preencha os dados - <strong>dados a serem preenchidos</strong>
         </Alert>
       )}
-      <div className="box-input">
+      <div className={styles.box}>
         <TextField
           name="titulo"
           type="text"
-          className="input input--titulo"
+          className={styles.input}
           label="Título"
           value={user.titulo}
           onChange={handleInputChange}
@@ -71,7 +89,7 @@ const EditUser = (props) => {
         <TextField
           name="descricao"
           type="text"
-          className="input input--descricao"
+          className={styles.input}
           label="Descrição"
           value={user.descricao}
           onChange={handleInputChange}
@@ -79,7 +97,7 @@ const EditUser = (props) => {
         <TextField
           name="prazo"
           type="text"
-          className="input input--prazo"
+          className={styles.input}
           label="Prazo de entrega"
           placeholder="dd-mm-aaaa"
           value={user.prazo}
@@ -88,25 +106,18 @@ const EditUser = (props) => {
         <TextField
           name="entregue"
           type="text"
-          className="input input--entregue"
+          className={styles.input}
           label="Entrega concluída"
           placeholder="sim/não"
           value={user.entregue}
           onChange={handleInputChange}
         />
       </div>
-      <div className="box-button">
-        <div className="adjust-1">
-          <Button variant="outlined" onClick={validation}>
-            editar
-          </Button>
-          <Button variant="outlined" onClick={() => props.setEditing(false)}>
-            cancelar
-          </Button>
-        </div>
-      </div>
-    </>
+      <Button className={styles.button} onClick={validation} variant="outlined">
+        adicionar
+      </Button>
+    </section>
   );
 };
 
-export default EditUser;
+export default AddUserForm;

@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
-import Navbar from "./inicial/components/Navbar";
-import Content from "./inicial/components/Content";
-import Sobre from "./sobre/Sobre";
+import Navbar from "../components/top/index";
+import Content from "../container/home/home";
+import Sobre from "../container/sobre/sobre";
 
 const Pages = () => {
   return (
@@ -11,7 +11,7 @@ const Pages = () => {
       <Navbar />
       <Routes>
         <Route element={ <Content /> } path="/" />
-        <Route element={ <Sobre /> } path="/Sobre" />
+        {/* <Route element={ <Sobre /> } path="/Sobre" /> */}
       </Routes>
     </BrowserRouter>
   );
