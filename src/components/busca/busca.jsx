@@ -35,7 +35,9 @@ const Busca = (props) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleChangeInput = (event) => {
     const { name, value } = event.target;
@@ -75,6 +77,7 @@ const Busca = (props) => {
         aria-labelledby="modal-modal-title"
         onClose={() => {
           handleClose();
+
           setModalBusca(props.initialBuscaState);
         }}
       >

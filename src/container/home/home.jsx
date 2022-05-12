@@ -95,10 +95,12 @@ const Content = () => {
     user.id = users.length + 1;
     console.log(user);
     setUsers([...users, user]);
+    setModalUsers([...modalUsers, user]);
   };
 
   const deleteUser = (id) => {
     setUsers(users.filter((user) => user.id !== id));
+    setModalUsers(users.filter((user) => user.id !== id));
   };
 
   const editRow = (user) => {
@@ -120,9 +122,8 @@ const Content = () => {
   };
 
   const buscarTitulo = (titulo) => {
-    console.log(modalUsers)
-    setModalUsers(usersData.filter((user) => user.titulo === titulo))
-  }
+    setModalUsers(users.filter((user) => user.titulo === titulo));
+  };
 
   const styles = useStyles();
 
@@ -135,7 +136,6 @@ const Content = () => {
               <Typography variant="h4" className={styles.title}>
                 Editando
               </Typography>
-              busca{" "}
               <EditUser
                 setEditing={setEditing}
                 currentUser={currentUser}
@@ -156,7 +156,6 @@ const Content = () => {
         </div>
         <div className={styles.busca}>
           <Busca
-            initialFormState={initialFormState}
             initialBuscaState={initialBuscaState}
             modalUsers={modalUsers}
             editRow={editRow}
